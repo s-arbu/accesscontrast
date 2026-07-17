@@ -1,0 +1,15 @@
+# AccessContrast robots.txt
+# Allow all search engines to fully index the site
+
+User-agent: *
+Allow: /
+
+# No crawl delay needed (modern bots handle rate limits intelligently)
+# You can add specific rules below if you ever add private/admin areas.
+
+# Example (commented out for now):
+# Disallow: /admin/
+# Disallow: /api/
+
+# Sitemap location
+Sitemap: https://accesscontrast.vercel.app/sitemap.xml

@@ -1,0 +1,31 @@
+# IDE & System files
+.directory
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+
+# Markdown files
+AGENTS.md
+
+# Node & Build
+node_modules
+dist
+dist-ssr
+*.local
+
+# Vite Cache
+.vite
+.vite-cache
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Env files
+.env
+.env.*
+
+# Vercel
+.vercel

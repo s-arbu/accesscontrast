@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+    <defs>
+        <clipPath id="logo-clip-left">
+            <rect x="0" y="0" width="50" height="100" />
+        </clipPath>
+        <clipPath id="logo-clip-right">
+            <rect x="50" y="0" width="50" height="100" />
+        </clipPath>
+    </defs>
+    <circle
+            cx="50"
+            cy="50"
+            r="44"
+            fill="none"
+            stroke="#4B5563"
+            stroke-width="12"
+            clip-path="url(#logo-clip-left)"
+    />
+
+    <circle
+            cx="50"
+            cy="50"
+            r="44"
+            fill="none"
+            stroke="#1E40AF"
+            stroke-width="12"
+            clip-path="url(#logo-clip-right)"
+    />
+    <circle
+            cx="50"
+            cy="50"
+            r="32"
+            fill="#D1D5DB"
+            clip-path="url(#logo-clip-left)"
+    />
+
+    <circle
+            cx="50"
+            cy="50"
+            r="32"
+            fill="#60A5FA"
+            clip-path="url(#logo-clip-right)"
+    />
+    <circle
+            cx="50"
+            cy="50"
+            r="18"
+            fill="#1E40AF"
+    />
+    <path
+            d="M 42 50 L 48 56 L 58 46"
+            fill="none"
+            stroke="#FFFFFF"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+    />
+</svg>
