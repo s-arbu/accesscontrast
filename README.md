@@ -21,7 +21,7 @@ AccessContrast helps designers and developers ensure their User Interfaces meet 
 
 Test UI mockups, extract exact pixel colors, analyze layout edges, and fine-tune your palette—all completely offline in your browser.
 
-## ✨ Features
+---
 
 - **🔒 100% Local Processing:** Your designs never leave your browser. Perfect for NDA-protected mockups.
 - **🎯 Pixel-Perfect Sampling:** Interactive canvas with a smart magnifying glass for precise color extraction.
@@ -36,6 +36,13 @@ Test UI mockups, extract exact pixel colors, analyze layout edges, and fine-tune
 - **Styling:** Tailwind CSS (fully responsive, custom dark mode)
 - **Routing:** React Router v6
 - **Deployment:** Vercel (Optimized SPA)
+
+- **🔒 100% Local Processing:** Your designs never leave your browser. Perfect for NDA-protected mockups.
+- **🎯 Pixel-Perfect Sampling:** Interactive canvas with a smart magnifying glass for precise color extraction.
+- **📊 WCAG Compliant:** Calculates accurate contrast ratios using official W3C relative luminance formulas.
+- **🔥 Edge-Detection Heatmap:** Highlights problematic layout boundaries (red for failing, green for passing).
+- **🎛️ Live Color Tuning:** Smooth HSL-based sliders to easily adjust failing colors.
+- **⌨️ Keyboard Accessible:** Full A11y support for the canvas and UI controls.
 
 ## 🚀 Quick Start
 
