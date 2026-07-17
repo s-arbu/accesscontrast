@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useColorContrast } from './hooks/useColorContrast';
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 import { Sidebar } from './components/layout/Sidebar';
 import { InteractiveCanvas } from './components/lab/InteractiveCanvas';
@@ -35,14 +37,16 @@ export default function App() {
   }, [isDark]);
 
   return (
+    <><Analytics />
+    <SpeedInsights />
     <BrowserRouter>
       <div className="min-h-screen bg-slate-50 text-slate-800 transition-colors dark:bg-slate-950 dark:text-slate-100 pb-28 lg:pb-0">
         <div className="mx-auto flex min-h-screen max-w-7xl flex-col lg:flex-row">
-          
+
           <Sidebar isDark={isDark} setIsDark={setIsDark} />
 
           <main className="flex-1 px-4 py-5 sm:px-6 lg:ml-24 lg:px-8 lg:py-8">
-            
+
             <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between animate-in fade-in duration-300">
               <div>
                 <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-blue-100 px-3 py-1 text-[11px] font-semibold text-blue-700 dark:bg-blue-950/50 dark:text-blue-300">
@@ -68,33 +72,28 @@ export default function App() {
 
             <Routes>
               {/* The workbench is now routed directly */}
-              <Route path="/" element={
-                <section className="grid grid-cols-1 gap-8 xl:grid-cols-[1.2fr_0.8fr] animate-in fade-in duration-300">
-                  <div className="space-y-6">
-                    <InteractiveCanvas 
-                      uploadedImage={uploadedImage} setUploadedImage={setUploadedImage}
-                      isLoading={isLoading} setIsLoading={setIsLoading}
-                      isHeatmapActive={isHeatmapActive} setIsHeatmapActive={setIsHeatmapActive}
-                      pickMode={pickMode} setPickMode={setPickMode}
-                      foreground={foreground} background={background}
-                      updateColor={updateColor} addHistory={addHistory} showToast={showToast}
-                    />
-                    <ColorTuningPanel 
-                      foreground={foreground} background={background}
-                      updateColor={updateColor} swapColors={swapColors} showToast={showToast}
-                    />
-                  </div>
+              <Route path="/" element={<section className="grid grid-cols-1 gap-8 xl:grid-cols-[1.2fr_0.8fr] animate-in fade-in duration-300">
+                <div className="space-y-6">
+                  <InteractiveCanvas
+                    uploadedImage={uploadedImage} setUploadedImage={setUploadedImage}
+                    isLoading={isLoading} setIsLoading={setIsLoading}
+                    isHeatmapActive={isHeatmapActive} setIsHeatmapActive={setIsHeatmapActive}
+                    pickMode={pickMode} setPickMode={setPickMode}
+                    foreground={foreground} background={background}
+                    updateColor={updateColor} addHistory={addHistory} showToast={showToast} />
+                  <ColorTuningPanel
+                    foreground={foreground} background={background}
+                    updateColor={updateColor} swapColors={swapColors} showToast={showToast} />
+                </div>
 
-                  <div className="space-y-6 lg:sticky lg:top-8 lg:h-fit">
-                    <LivePreview foreground={foreground} background={background} />
-                    <ComplianceMetrics 
-                      foreground={foreground} background={background} 
-                      contrastResult={contrastResult} updateColor={updateColor}
-                    />
-                    <ContrastHistory history={history} onRestore={restoreFromHistory} />
-                  </div>
-                </section>
-              } />
+                <div className="space-y-6 lg:sticky lg:top-8 lg:h-fit">
+                  <LivePreview foreground={foreground} background={background} />
+                  <ComplianceMetrics
+                    foreground={foreground} background={background}
+                    contrastResult={contrastResult} updateColor={updateColor} />
+                  <ContrastHistory history={history} onRestore={restoreFromHistory} />
+                </div>
+              </section>} />
               <Route path="/guide" element={<GuideTab />} />
               <Route path="/faq" element={<FaqTab />} />
               <Route path="*" element={<Navigate to="/" replace />} />
@@ -104,17 +103,15 @@ export default function App() {
         </div>
 
         {toast && (
-          <div 
-            role="status" 
-            aria-live="polite" 
-            className={`fixed bottom-20 left-1/2 z-50 -translate-x-1/2 rounded-2xl px-4 py-3 text-sm font-semibold shadow-xl transition-all animate-in fade-in slide-in-from-bottom-4 duration-300 lg:bottom-6 ${
-              toast.variant === 'success' ? 'bg-slate-900 text-white dark:bg-white dark:text-slate-950' : 'bg-rose-600 text-white'
-            }`}
+          <div
+            role="status"
+            aria-live="polite"
+            className={`fixed bottom-20 left-1/2 z-50 -translate-x-1/2 rounded-2xl px-4 py-3 text-sm font-semibold shadow-xl transition-all animate-in fade-in slide-in-from-bottom-4 duration-300 lg:bottom-6 ${toast.variant === 'success' ? 'bg-slate-900 text-white dark:bg-white dark:text-slate-950' : 'bg-rose-600 text-white'}`}
           >
             {toast.message}
           </div>
         )}
       </div>
-    </BrowserRouter>
+    </BrowserRouter></>
   );
 }

@@ -17,11 +17,11 @@
 
 ---
 
-AccessContrast helps designers and developers ensure their User Interfaces meet the strict accessibility standards of **WCAG 2.1/2.2 (Level AA and AAA)** and the upcoming **European Accessibility Act (EAA / BFSG)**. 
+AccessContrast helps designers and developers ensure their User Interfaces meet the strict accessibility standards of **WCAG 2.1/2.2 (Level AA and AAA)** and the upcoming **European Accessibility Act (EAA / BFSG)**.
 
 Test UI mockups, extract exact pixel colors, analyze layout edges, and fine-tune your palette—all completely offline in your browser.
 
-## ✨ Features
+---
 
 - **🔒 100% Local Processing:** Your designs never leave your browser. Perfect for NDA-protected mockups.
 - **🎯 Pixel-Perfect Sampling:** Interactive canvas with a smart magnifying glass for precise color extraction.
@@ -37,9 +37,17 @@ Test UI mockups, extract exact pixel colors, analyze layout edges, and fine-tune
 - **Routing:** React Router v6
 - **Deployment:** Vercel (Optimized SPA)
 
+- **🔒 100% Local Processing:** Your designs never leave your browser. Perfect for NDA-protected mockups.
+- **🎯 Pixel-Perfect Sampling:** Interactive canvas with a smart magnifying glass for precise color extraction.
+- **📊 WCAG Compliant:** Calculates accurate contrast ratios using official W3C relative luminance formulas.
+- **🔥 Edge-Detection Heatmap:** Highlights problematic layout boundaries (red for failing, green for passing).
+- **🎛️ Live Color Tuning:** Smooth HSL-based sliders to easily adjust failing colors.
+- **⌨️ Keyboard Accessible:** Full A11y support for the canvas and UI controls.
+
 ## 🚀 Quick Start
 
 **1. Clone & Install**
+
 ```bash
 git clone [https://github.com/s-arbu/accesscontrast.git](https://github.com/s-arbu/accesscontrast.git)
 cd accesscontrast
@@ -64,11 +72,11 @@ bun run build
 
 Contributions are always welcome! Whether it's a bug fix, a new feature, or documentation improvements.
 
-* Fork the Project
-* Create your Feature Branch (git checkout -b feature/AmazingFeature)
-* Commit your Changes (git commit -m 'Add some AmazingFeature')
-* Push to the Branch (git push origin feature/AmazingFeature)
-* Open a Pull Request
+- Fork the Project
+- Create your Feature Branch (git checkout -b feature/AmazingFeature)
+- Commit your Changes (git commit -m 'Add some AmazingFeature')
+- Push to the Branch (git push origin feature/AmazingFeature)
+- Open a Pull Request
 
 ⚖️ License
 Distributed under the MIT License. See LICENSE for more information.
