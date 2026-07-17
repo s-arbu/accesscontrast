@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useColorContrast } from './hooks/useColorContrast';
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 import { Sidebar } from './components/layout/Sidebar';
 import { InteractiveCanvas } from './components/lab/InteractiveCanvas';
@@ -37,6 +38,7 @@ export default function App() {
 
   return (
     <><Analytics />
+    <SpeedInsights />
     <BrowserRouter>
       <div className="min-h-screen bg-slate-50 text-slate-800 transition-colors dark:bg-slate-950 dark:text-slate-100 pb-28 lg:pb-0">
         <div className="mx-auto flex min-h-screen max-w-7xl flex-col lg:flex-row">
