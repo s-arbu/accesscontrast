@@ -1,0 +1,10 @@
+# llms.txt - AI indexing hints for AccessContrast
+# Generated: 2026-08-13
+site: https://accesscontrast.vercel.app/
+title: AccessContrast
+lang: en
+sitemap: https://accesscontrast.vercel.app/sitemap.xml
+contact: contact.swebtools@gmail.com
+notes: |
+  Provide canonical URLs, Open Graph, and JSON-LD where available.
+  Index main pages; generate a fuller sitemap when site grows or adds CMS.
